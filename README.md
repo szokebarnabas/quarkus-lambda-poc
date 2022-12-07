@@ -1,7 +1,7 @@
 # Quarkus lambda POC with native GraalVM image
 
 ### Description
-The purpose of this project to deploy and experiment with a native GraalVM image created by the Quarkus framework + java 17 and investigate the cold start and the overall latency of a simple rest endpoint. The deployment is performed using the AWS Serverless Application Model framework (https://aws.amazon.com/serverless/sam/) 
+The purpose of this project to deploy and experiment with a native GraalVM image created in the Quarkus framework + java 17. The deployment is performed using the AWS Serverless Application Model framework (https://aws.amazon.com/serverless/sam/) 
 
 ### Requirements:
 - Quarkus cli (`brew install quarkusio/tap/quarkus`)
