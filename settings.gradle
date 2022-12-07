@@ -9,3 +9,10 @@ pluginManagement {
     }
 }
 rootProject.name = 'quarkus-lambda-poc'
+
+include 'quarkus-native-lambda'
+include 'deployment'
+include 'nft'
+include 'deployments:lambda'
+include 'deployments:nft'
+

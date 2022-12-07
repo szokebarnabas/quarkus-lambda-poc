@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'io.gatling.gradle' version "3.7.6.3"
+
+
+}
+
+dependencies {
+    implementation 'io.gatling:gatling-core:3.7.6'
+    implementation 'io.gatling:gatling-http:3.7.6'
+    implementation 'io.gatling:gatling-core-java:3.7.6'
+    implementation 'io.gatling.highcharts:gatling-charts-highcharts:3.7.6'
+
+}
+
+gatling {
+    logLevel = 'WARN'
+    logHttp = 'NONE'
+    simulations = {
+        include "**/*Simulation.java" // <2>
+    }
+
+
+    task runNft(type: JavaExec) {
+        description = 'Run a non-functional test'
+        group = 'NFT test'
+        classpath = sourceSets.test.runtimeClasspath
+        main = 'io.gatling.app.Gatling'
+        args = [
+                '--simulation', 'TestSimulation',
+                '--results-folder', "${buildDir}/gatling-results"
+        ]
+    }
+}
